@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage("Get Repo"){
+            steps{
+                gti 'https://github.com/malghamd333333/t1.git'
+            }
+        }//endStageGet
+        stage("run Python"){
+            steps{
+                sh 'python3 welcome.py'
+            }
+        }//RunPython
+    }
+}
