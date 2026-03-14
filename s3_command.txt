@@ -8,6 +8,9 @@ aws s3 ls s3://buckets-name --recursive
 #make new bucket
 aws s3  mb s3://bucket-name  --region us-east-1
 
+#delete bucket
+aws s3 rb s3://bucket-name   --force
+
 #copy file from local to s3
 aws s3 cp my-local-file.img s3://bucket-name
 
@@ -17,3 +20,15 @@ aws s3 cp s3://bucket-name/image-name.img  .
 
 #move command will be delete file after move it 
 aws s3 mv file.img s3://bucket-name
+
+#compy folder
+aws s3 cp local-folder-name/ s3://bucket-name  --recursive
+
+#remove file 
+aws s3 rm s3://bucket-name/file-name.img
+
+#synic local folder
+aws s3 sync . s3://bucket-name
+
+#get bucket location
+aws s3api get-bucket-location --bucket bucket-name
