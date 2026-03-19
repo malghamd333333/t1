@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Welcome to Docker pushing"
+# docker login
 
 docker build -t flask-app-img .
 
