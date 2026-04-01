@@ -13,3 +13,5 @@ docker tag flask-image-for-ecs-test1:latest 410614794148.dkr.ecr.us-east-1.amazo
 
 
 docker push 410614794148.dkr.ecr.us-east-1.amazonaws.com/flask-image-for-ecs-test1:latest
+
+
